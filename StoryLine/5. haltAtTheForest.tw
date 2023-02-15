@@ -1,0 +1,350 @@
+:: haltAtTheForest
+
+@@#exposition;\
+Смеркается.
+
+Дождь затих. Луна пробивается сквозь тёмные облака и освещает широкую прогалину, где расположился ваш отряд. 
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            Гномы бодро и шутя разбивают палатки и навесы. В этом нет нужды: вокруг вас неизвестные вам деревья и растения, чьи листья ещё больше, чем вы видели ранее — они спокойно защитят от дождя.
+
+            Другие гномы вовсю поют свои пошлые песни и пляшут вокруг костра. Паладин Галеран снял доспехи и отплясывает с ними в одной рубашке и кожаных штанах. Бастен Пруиз разливает пиво по кружкам и разносит их воинам. 
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<goto 'madvenaDialogue'>>
+            <</replace>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+
+:: madvenaDialogue
+
+<<if $dwarfsTotal == 90 && $lostGold == true>>\
+    @@#exposition;\
+    У зелёной повозки эльфийки образовалась очередь. Вы дожидаетесь, когда уходит последний гном, отодвигаете шторку, и заходите внутрь.
+    @@
+
+    <<silently>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<pln>>Как прогресс?<</pln>>
+            <</replace>> 
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<mad>>Могло быть и лучше. Десятеро погибли, есть раненые, как видишь. Не стоило лезть на рожон.<</mad>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>У меня не было времени думать. Нужно было действовать<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<goto 'madvenaDialogue_1'>>
+                        <</replace>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</silently>>
+
+<<elseif $dwarfsTotal == 90 && $lostGold == false>>\
+    @@#exposition;\
+    У зелёной повозки эльфийки образовалась очередь. Вы дожидаетесь, когда уходит последний гном, отодвигаете шторку, и заходите внутрь.
+    @@
+
+    <<silently>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<pln>>Как прогресс?<</pln>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<mad>>Всё обошлось синяками. Ваш трюк с сундуком и дымовой шашкой неплохо сработал.<</mad>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>Я не мог рисковать ни золотом, ни людьми.<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<goto 'madvenaDialogue_1'>>
+                        <</replace>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</silently>>
+
+<<else>>\
+    @@#exposition;\
+    Вы замечаете, что нигде не видно Мадвены, и решаете проверить её зелёную повозку. Вы стучитесь.
+    @@
+
+    <<silently>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<mad>>Да? Заходите.<</mad>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<goto 'madvenaDialogue_1'>>
+                <</replace>>
+            <</cont>>
+        <</cont>>
+    <</silently>>
+<</if>>
+
+:: madvenaDialogue_1
+
+@@#exposition;\
+<<mad>>Вам помощь моя нужна? Присаживайтесь на кровать. Мне всё равно заняться нечем.<</mad>>
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\        
+            Эльфийка прикладывает свои нежные как бархат ладошки к вашей голове. Ваши глаза невольно закрываются. 
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                10 минут спустя…
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<mad>>Всё, больше не могу. Ах, голова заболела.<</mad>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>Прости. Вот поэтому я и стараюсь не использовать магию, когда вздумается. Мигрень потом неделю добивает.<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<mad>>В вас ведь есть эльфийская кровь, да? Иначе откуда взяться магии…<</mad>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\
+                                <<mad>>У нас, эльфов, запасы сил на неё гораздо больше, чем у людей. Вот только на целительство уходит больше всего… Это вам не ромашкой лечить.<</mad>>
+                            <</replace>>
+                            <<cont keypress>>
+                                <<replace '#exposition'>>\
+                                    <<pln>>Спасибо, что потратила их на меня.<</pln>>
+                                <</replace>>
+                                <<cont keypress>>
+                                    <<replace '#exposition'>>\
+                                        <<mad>>Это самое малое, что я могу для вас сделать. Спасибо вам, что помогли Галерану. <</mad>>
+                                    <</replace>>
+                                    <<cont keypress>>
+                                        <<replace '#exposition'>>\
+                                            <<mad>>Если бы не вы, его бы убили свои же, а со мной… Со мной бы те "благородные" паладины бы не церемонились.<</mad>>
+                                        <</replace>>
+                                        <<cont keypress>>
+                                            <<replace '#exposition'>>\
+                                                <<pln>>Не мог же я оставить тебя в беде.<</pln>>
+                                            <</replace>>
+                                            <<cont keypress>>
+                                                <<replace '#exposition'>>\
+                                                    <<mad>>Но вы так дорожите временем…<</mad>>
+                                                <</replace>>
+                                                <<cont keypress>>
+                                                    <<replace '#exposition'>>\
+                                                        Мадвена смущенно отводит взгляд.
+                                                    <</replace>>
+                                                    <<cont keypress>>
+                                                        <<replace '#exposition'>>\
+                                                             <<mad>>Знаете, когда мы, эльфы, совершаем транш магических сил, мы можем читать мысли. Вы думали о моих руках.<</mad>>
+                                                        <</replace>>
+                                                        <<cont keypress>>
+                                                            <<replace '#exposition'>>\
+                                                                <<pln>>Прости. Людские маги редко имеют дело с женщинами.<</pln>>
+                                                            <</replace>>
+                                                            <<cont keypress>>
+                                                                <<replace '#exposition'>>\
+                                                                    <<mad>>Ничего. Сочту ваши мысли за комплимент… И чем вам женщины не угодили?<</mad>>
+                                                                <</replace>>
+                                                                <<cont keypress>>
+                                                                    <<replace '#exposition'>>\
+                                                                        <<pln>>Всех чародеек перебили и сожгли на кострах, а мы теперь вынуждены скрываться. У простолюдинок есть предрассудки.<</pln>>
+                                                                    <</replace>>
+                                                                    <<cont keypress>>
+                                                                        <<replace '#exposition'>>\
+                                                                            <<mad>>А что насчёт женщин… Ну, которые за деньги?<</mad>>
+                                                                        <</replace>>
+                                                                        <<cont keypress>>
+                                                                            <<replace '#exposition'>>\
+                                                                                <<pln>>Предрассудки есть и у магов. Хотя и не безосновательные.<</pln>>
+                                                                            <</replace>>
+                                                                            <<cont keypress>>
+                                                                                <<replace '#exposition'>>\
+                                                                                    Ваш ответ рассмешил эльфику. 
+                                                                                <</replace>>
+                                                                                <<cont keypress>>
+                                                                                    <<replace '#exposition'>>\
+                                                                                        <<pln>>На самом деле, маги редко выходят из своих убежищ. Мы постоянно тренируемся контролировать свои силы. Нам это не так легко даётся, как эльфам. Есть и другие причины — о них я не могу распространяться.<</pln>>
+                                                                                    <</replace>>
+                                                                                    <<cont keypress>>
+                                                                                        <<replace '#exposition'>>\
+                                                                                            <<goto 'madvenaDialogue_2'>>
+                                                                                        <</replace>>
+                                                                                    <</cont>>
+                                                                                <</cont>>
+                                                                            <</cont>>
+                                                                        <</cont>>
+                                                                    <</cont>>
+                                                                <</cont>>
+                                                            <</cont>>
+                                                        <</cont>>
+                                                    <</cont>>
+                                                <</cont>>
+                                            <</cont>>
+                                        <</cont>>
+                                    <</cont>>
+                                <</cont>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+:: madvenaDialogue_2
+
+@@#exposition;\
+В повозку врывается гном и прерывает разговор. Он еле стоит на ногах.
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<maup>>Эй, маг, мадама! Кушать почти подано, поднимайте свои булки и топайте к столу. Ик!<</maup>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                Гном подходит к вам ближе и тянет вас вниз вас за робу.
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<maup>>Эй, маг, бухать бушь? Ик! <</maup>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        Говорит он таинственно, словно эльфийка — ваша жена, и вот-вот бы вас "застукала" и устроила нагоняй за алкоголизм. 
+                        
+                        Однако, его "шёпот" слышно на всю повозку, а возможно и за ней.
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<maup>>Я претендовал на первое место по надиранию жоп бандитов, но ты смухлевал с этими своими фокусами-покусами. Ик! Ты теперь должен нам штрафную! Ик!<</maup>>\
+                            [[1. Отказаться|refuseDrink]]
+                            [[2. Согласиться|acceptDrink]]
+                        <</replace>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+
+
+:: refuseDrink
+<<silently>>
+    <<set $gotDrunk = false>>
+<</silently>>\
+@@#exposition;\
+<<pln>>Благодарю за предложение, Мауп. Вынужден отказать — завтра рано вставать. Да и вам напиваться не стоит.<</pln>>
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<maup>>Это преступление говорить гному, что ему нельзя нажираться. Ик! Я нажрусь сегодня, а завтра буду огурчиком, отвечаю!<</maup>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                Мауп рыгает и вытирает губы.
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<maup>>Или я не Мауп Корнеллисен Оп'т, мать его, Мартенс! Делаю ставку — тебе меня не перепить.<</maup>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>Как скажешь, Мауп. Я уже сказал, что не могу.<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<maup>>Тьфу! Да ну тебя, зануда. Ой…<</maup>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\
+                                <<goto 'maupLeaves'>>
+                            <</replace>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+
+:: acceptDrink
+
+<<silently>>
+    <<set $gotDrunk = true>>
+<</silently>>
+@@#exposition;\
+<<pln>>Почему бы и нет. Надеюсь, удастся завтра встать.<</pln>>
+@@
+
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<maup>>Вот и опердупельно! Ик!  Я тебя перепью. Или я не Мауп Корнеллисен Оп'т Мартенс!<</maup>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<goto 'maupLeaves'>>
+            <</replace>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+
+
+:: maupLeaves
+
+@@#exposition;\
+Гном ушел, ковыляя назад своими маленькими ножками и бормоча что-то под нос. Даже среди остальных гномов он казался меньше всех ростом. 
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            Мадвена рассмеялась.
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<mad>>Вот с кем вам придётся иметь дело всю дорогу<</mad>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<pln>>Увы. Надежнее телохранителей не найти.<</pln>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<goto 'feastAtTheCamp'>>
+                    <</replace>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>

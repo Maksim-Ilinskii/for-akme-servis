@@ -1,0 +1,21 @@
+<<silently>>
+    <<set $diceTotal = setup.mydice()>>
+<</silently>>\
+
+Hello very nice
+<div class="btndice">[[|Dice]]</div>
+    
+
+:: Dice
+
+<div class="msgbox">Шанс:</div>10%
+
+<<if $diceTotal >= 90 >>\
+<img src=Media/twenty-sided-dice.svg width="3%"> <<print $diceTotal>>
+Успех!
+<<else>>\
+<img src=Media/twenty-sided-dice.svg width="3%"> <<print $diceTotal>>
+Провал!
+<</if>>
+
+

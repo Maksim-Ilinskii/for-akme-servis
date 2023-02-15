@@ -1,0 +1,32 @@
+sugarcube-2:
+  macros:
+    cont:
+      name: cont
+      container: true
+    pln:
+      name: pln
+      container: true
+    ger:
+      name: ger
+      container: true
+    weasel:
+      name: weasel
+      container: true
+    bdtchief:
+      name: bdtchief
+      container: true
+    gal:
+      name: gal
+      container: true
+    mad:
+      name: mad
+      container: true
+    bdt1:
+      name: bdt1
+      container: true
+    maup:
+      name: maup
+      container: true
+    bas:
+      name: bas
+      container: true

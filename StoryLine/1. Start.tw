@@ -1,0 +1,315 @@
+:: StartHere
+
+
+<div style="text-align:center;">Добро пожаловать в демоверсию игры</div>\
+<div style="text-align:center;">Ильинского Максима</div>
+
+<div class="bigasshdr">Охота на дракона</div>
+
+<div style="text-align:center;">Для компании "АКМЭ Сервис"</div>
+<div class="buttoncenter" style="text-align:center;float:center;">[[Начать игру|beginGame]]</div>
+
+
+:: beginGame
+
+<<silently>>
+<<include Variables>>
+<</silently>>\
+@@#exposition;\
+Дождь, слякоть и грязь. Колонна из гномов, эльфийки, и паладина, едут верхом сквозь джунгли — эльфийка в небольшой зеленой повозке, украшенной белыми цветами и лианами.
+
+Впереди колонны молча едут гном и заскорузлый мужчина в коричневой робе, пятидесяти трех лет. Наконец, гном решается нарушить молчание.
+
+<div class='crtscreenfont fadeoutinifinite' style="text-align:center;">>Кликните в любое место, чтобы продолжить</div>\
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<ger>>Ты хоть знаешь, сколько нам ещё идти? Мои парни уже устали. Нужен привал.<</ger>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<pln>>Твои парни такие неженки? Тогда король выбрал не тех для этой миссии. Придётся заплатить кому-то ещё...<</pln>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<ger>>Что значит "не тех"? Ещё как тех! Просто мы идём уже четвёртую неделю без привалов на обед… Только на ночь.<</ger>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>Вот и отлично. Быстрее придём.<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<ger>>Привал нужен, Дельмут. Парни совсем поникли, да и лошади устали. И каждый день какая-то погань нас достаёт.<</ger>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\ 
+                                <<ger>>Ни дня без стычек не проходит. Кто-то знает о наших перемещениях, жопой чую!<</ger>>
+                            <</replace>>
+                            <<cont keypress>>
+                                <<replace '#exposition'>>\ 
+                                    <<ger>>Сто пудов — это белобрысый стручок нас сдаёт. Он же из войска Ле Сартаса.<</ger>>
+                                <</replace>>
+                                <<cont keypress>>
+                                    <<replace '#exposition'>>\
+                                        <<pln>>Не думаю, что это паладин. Он слишком многим пожертвовал, когда решил спасти эльфийку.<</pln>>
+                                    <</replace>>
+                                    <<cont keypress>>
+                                        <<replace '#exposition'>>\ 
+                                            <<pln>>В Гройэндрии, откуда он родом, его ждет смерть. За то что пошёл против своих.<</pln>>
+                                        <</replace>>
+                                        <<cont keypress>>
+                                            <<replace '#exposition'>>\
+                                                <<pln>>Я найду шпиона.<</pln>>
+                                            <</replace>>
+                                            <<cont keypress>>
+                                                <<replace '#exposition'>>\
+                                                    <<ger>>Кто бы ни был замешан, я отстегаю его плетью так сильно, что никогда на жопу больше не присядет!<</ger>>
+                                                <</replace>>
+                                                <<cont keypress>>
+                                                    <<replace '#exposition'>>\     
+                                                        <<ger>>Это ещё полбеды. По ночам у нас снуёт какая-то огромная специально обученная кошка. Уже троих парней моих сожрала.<</ger>>
+                                                    <</replace>> 
+                                                    <<cont keypress>>
+                                                        <<replace '#exposition'>>\
+                                                            <<ger>>Как только другие просыпаются на помощь — она тут же убегает.<</ger>>
+                                                        <</replace>>
+                                                        <<cont keypress>>
+                                                            <<replace '#exposition'>>\
+                                                                <<pln>>Стой.<</pln>>
+                                                            <</replace>>
+                                                            <<cont keypress>>
+                                                                <<replace '#exposition'>>\
+                                                                    <<goto 'BanditsApproach'>>
+                                                                <</replace>>
+                                                            <</cont>>
+                                                        <</cont>>
+                                                    <</cont>>
+                                                <</cont>>
+                                            <</cont>>
+                                        <</cont>>
+                                    <</cont>>
+                                <</cont>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+:: BanditsApproach
+
+@@#exposition;\
+Вы останавливаете предводителя гномов жестом. Он передает приказ своим людям. 
+
+Дорогу преграждает стройная линия из бандитов. Их в два раза больше, чем гномов. Дождь бьёт по листьям деревьев, размером с человеческий рост. Трава хлюпает под ногами.
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<bdtchief>>Тут ваша остановочка.<</bdtchief>> 
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\    
+                Бандит сплёвывает на землю.
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<bdtchief>>Правила просты как два обоссаных пальца: отдаёте всё, что у вас есть, и, может быть — мо-о-ожет быть, дадим вам пожить.
+                    <</bdtchief>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<bdtchief>>Будете сопротивляться — вас убьём, а эльфку вашу пустим по кругу<</bdtchief>>\
+                        [[1. Не рисковать|dontRisk]]
+                        [[2. Пойти в атаку|attack]]
+                    <</replace>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>                                
+
+
+:: dontRisk
+
+@@#exposition;\
+Вы смотрите в сторону гномского квартермейстра и по совместительству повара Бастена Пруиза.
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<pln>>Бастен, принеси сундук с золотом. Я лично отнесу его достопочтенному господину.<</pln>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<ger>>Ты что, с ума сошел?! Это наши последние деньги.<</ger>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<pln>>Спокойно. Доверься мне.<</pln>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        Геррит ворчит, но ничего против больше не высказывает. Гномский квартермейстер Бастен Пруиз кряхтя приносит вам сундук с золотом.
+
+                        Вы перехватываете его, и согнувшись в коленях идете с ним к бандиту. Бандиты поднимают луки. Их главарь показывает жестом, что всё в порядке. Вы подходите ближе, пока не оказываетесь на расстоянии вытянутой руки.
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<bdtchief>>Вот и молодцы, вот это я понимаю — сервис. Вот все бы так!<</bdtchief>>\
+                            [[1. Устроить диверсию.|makeDiversion]]
+                            [[2. Уйти|leaveChest]]
+                        <</replace>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+:: attack
+
+@@#exposition;\
+<<pln>>У меня нет времени на этот бред. Дай пройти или захлебнёшься в крови. Это первое и последнее предупреждение. <</pln>>
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<bdtchief>>Что ты там пукнул, старик? Хочешь последних зубов не досчитаться?
+
+            Давайте деньги, или будет больно. Тут территория Мазепы Лысого. Сдавайтесь, нас больше, и мы больше.<</bdtchief>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                Бандит показывает в сторону гномов с ухмылкой, и смех поддержки раздается среди его соратников. Один из гномов тянется к оружию и рычит.
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<pln>>Геррит. Знаешь, что делать.<</pln>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<ger>>Вот и я тоже не вижу смысла дальше сиськи мять.<</ger>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<ger>>Парни, команда — мотать их сучьи кишки на сучьи сучья! Не при дамах будет сказано… <</ger>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\
+                            <div class="msgbox fadeout">Союзников: </div> <div class="fadeout">-10</div>
+                                Бандиты выпускают стрелы, и десять из ста гномов падают замертво. Вы еле успеваете увернуться. Гномы бегут в атаку, и начинается сражение.
+                        
+                                <<set $firstBattleHappened = true>>
+                                <<set $dwarfsTotal -=10>>                              
+                            <</replace>>
+                            <<cont keypress>>
+                                <<replace '#exposition'>>\
+                                    Внимание! Количество людей в вашем отряде ограничено.
+
+                                    <div class="msgbox">Осталось союзников: <<print $dwarfsTotal>></div>
+                                <</replace>>
+                                <<cont keypress>>
+                                    <<replace '#exposition'>>\
+                                        <<goto 'battleBegin'>>
+                                    <</replace>>
+                                <</cont>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+
+
+:: makeDiversion
+<<silently>>
+    <<set $firstBattleHappened = true>>
+<</silently>>\
+@@#exposition;\
+Вы достаёте из подсумка дымовую шашку и бросаете под ноги противника. Резкий удар в нос, и главарь бандитов мгновенно отправляется в нокаут. Вы тут же отбегаете, пока не задохнулись сами.
+
+Пока бандиты откашливаются, гномы резко бросают копья в сторону противников. Из-за дыма слышатся крики. Когда дым рассеивается, вы видите: добрая треть из бандитов лежит на земле — раненая или убитая. 
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\    
+            Один из бандитов, протирая глаза, смотрит на обездвиженное тело своего начальника.
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+               <<weasel>> В атаку! Они шефу надрали жо… Имя доброе опорочили! Что встали как голую девку увидели! В атаку-у-у!<</weasel>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    Гномы и бандиты бросаются друг на друга. Лязг оружия нарушает тишину в джунглях.
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<goto 'battleBegin'>>
+                    <</replace>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+            
+
+
+:: leaveChest
+<<silently>>
+    <<set $lostGold = true>>
+    <<set $firstBattleHappened = false>>
+<</silently>>\
+@@#exposition;\
+<<pln>>Это всё, что я могу вам предложить.<</pln>>
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            Пойдёт. Пацаны, расступись!
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                Бандиты расступаются. Среди гномов стоит ворчание и недоумение. Пятеро из них сердито смотрят на вас.
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<ger>>Эх, столько золота потеряли! На что нам теперь жратву покупать?<</ger>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<pln>>Скажи спасибо, что остались живы. Нам некогда отвлекаться на бессмысленные драки.<</pln>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<pln>>Мне ещё понадобятся твои люди в полном составе. Наш король возместит убытки.<</pln>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\
+                                <<ger>>Эх…<</ger>>
+                            <</replace>>
+                            <<cont keypress>>
+                                <<replace '#exposition'>>\
+                                    <<goto 'afterBattle'>>
+                                <</replace>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>

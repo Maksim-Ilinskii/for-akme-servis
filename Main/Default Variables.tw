@@ -1,0 +1,37 @@
+:: Variables [data] {"position":"0,600"}
+<<silently>>
+    <<set $Player = {
+        name: "Дельмут Зильмаер",
+        сrystals: 50,
+        keys: 1,
+        detective: 0,
+        lawmaker: 0,
+        renegate: 0,
+        ace: 0,
+    }>>
+    <<set $Gerrit = {
+        name: "Геррит-Ян Столтенберг",
+        relationship: 0,
+    }>>
+    <<set $Galeran = {
+        name: "Галеран Ле Тоер",
+        relationship: 0,
+    }>>
+    <<set $Basten = {
+        name: "Бастен Пруиз",
+        relationship: 0,
+    }>>
+    <<set $Maup = {
+        name: "Мауп Корнеллисен оп'т Мартенс",
+    }>>
+    <<set $Madvena = {
+        name: "Мадвена Винфирийская",
+    }>>
+
+    <<set $diceTotal = setup.mydice()>>
+    <<set $dwarfsTotal = 100>>
+    <<set $lostGold = false>>
+    <<set $firstBattleHappened = false>>
+    <<set $lostLeg = false>>
+    <<set $usedLightning = true>>
+<</silently>>

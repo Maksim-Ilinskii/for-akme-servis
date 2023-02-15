@@ -1,0 +1,28 @@
+:: StoryData
+{
+    "ifid": "57E99C6D-28F0-4C64-8FA3-AE8E336C367A",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "StartHere",
+    "zoom": 1
+}
+
+:: StoryTitle 
+Test Story 
+
+:: Widgets [widget] {"position":"0,475"}
+
+/* Names: */
+
+<<widget "pn">><span class='playername'>$Player.name</span><</widget>>
+
+/*  Developer notes: */
+<<widget "devn">><span class='devnote'></span><</widget>>
+
+/*  Tutorial: */
+<<widget "tut">><span class='tutorial'></span><</widget>>
+
+<<widget "msgbox">><span class='messagebox'></span><</widget>>
+
+/* pcsmall */
+<<widget "pcsmall">><div class='padnopicsmall'></div><</widget>>

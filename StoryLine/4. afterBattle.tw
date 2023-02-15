@@ -1,0 +1,74 @@
+:: afterBattle
+
+@@#exposition;\
+<<if $lostGold == true && $dwarfsTotal == 100>>
+Вы остались ни с чем, но вам удалось сохранить много жизней. Вы продолжаете путь.
+<<else>>
+Все враги побеждены. Вы снова в дороге.
+<</if>>
+@@
+
+<<silently>>
+    <<cont keypress>>
+        <<replace '#exposition'>>\
+            <<ger>>И что это мать твою такое было?<</ger>>
+        <</replace>>
+        <<cont keypress>>
+            <<replace '#exposition'>>\
+                <<pln>>О чём ты?<</pln>>
+            <</replace>>
+            <<cont keypress>>
+                <<replace '#exposition'>>\
+                    <<ger>>О магии, конечно! Почему ты сразу ею не воспользовался?<</ger>>
+                <</replace>>
+                <<cont keypress>>
+                    <<replace '#exposition'>>\
+                        <<if $dwarfsTotal == 90 && $lostGold == false>>\
+                            <<ger>>Мне бы не пришлось бы хороших парней терять…<</ger>>     
+                        <<elseif $dwarfsTotal == 100 && $lostGold == true>>\
+                            <<ger>>Не пришлось бы золото терять.<</ger>>
+                        <<else>>
+                            <<ger>>Не пришлось бы так рисковать.<</ger>>
+                        <</if>>
+                    <</replace>>
+                    <<cont keypress>>
+                        <<replace '#exposition'>>\
+                            <<pln>>После заклинаний мне нужно как минимум трое суток на восстановление сил. У нас нет столько времени, а сколько ещё битв нас с более опасным противником — не известно.<</pln>>
+                        <</replace>>
+                        <<cont keypress>>
+                            <<replace '#exposition'>>\
+                                <<pln>>К счастью, с нами целительница, и мне хватит одних суток — на этот раз. Её силы тоже не бесконечные, и она нам так же нужна "заряженной".<</pln>>
+                            <</replace>>
+                            <<cont keypress>>
+                                <<replace '#exposition'>>\
+                                    <<ger>>Из всей этой тирады я услышал "нужен привал". Теперь-то ты согласен?<</ger>> 
+                                <</replace>>
+                                <<cont keypress>>
+                                    <<replace '#exposition'>>\
+                                        <<pln>>Придётся.<</pln>>
+                                    <</replace>>
+                                    <<cont keypress>>
+                                        <<replace '#exposition'>>\
+                                            <<ger>>Ну слава яйцам Орсинии! Парни… Э-э, и дама… Привал!<</ger>>
+                                        <</replace>>
+                                        <<cont keypress>>
+                                            <<replace '#exposition'>>\
+                                                В рядах гномов слышатся довольные возгласы.
+                                            <</replace>>
+                                            <<cont keypress>>
+                                                <<replace '#exposition'>>\
+                                                    <<goto 'haltAtTheForest'>>
+                                                <</replace>>
+                                            <</cont>>
+                                        <</cont>>
+                                    <</cont>>
+                                <</cont>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>>
+<</silently>>
+                                    
