@@ -66,7 +66,7 @@
                             <</replace>>
                             <<cont keypress>>
                                 <<replace '#exposition'>>\
-                                    Вы разминаете кости и готовитесь драться в рукопашную против бандитов в броне.
+                                    Вы готовитесь драться в рукопашную против бандитов в броне.
                                 <</replace>>
                                 <<replace '#exposition'>>\
                                     <<goto 'fightBarehanded'>>
